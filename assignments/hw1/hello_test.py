@@ -47,6 +47,4 @@ class TestClass:
         # Will be executed before the first test
         yield
         # Will be executed after the last test
-        print(f'\nTotal: {total} / 90')
-
-print ("Hello world!")
+        print(f'\nTotal: {total} / 90
