@@ -1,9 +1,10 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Lindy Mayes
+Graphics.py
 """
 
 from graphics import *
+import math
 
 
 def target():
@@ -23,10 +24,38 @@ def triangle():
     win_height = 500
     win = GraphWin("Draw a Triangle", win_width, win_height)
 
-    # Add code here to accept the mouse clicks, draw the triangle.
-    # and display its area in the graphics window.
+    p1 = win.getMouse()
+    p1.draw(win)
+    p2 = win.getMouse()
+    p2.draw(win)
+    p3 = win.getMouse()
+    p3.draw(win)
 
-    # Wait for another click to exit
+    triangle = Polygon(p1, p2, p3)
+    triangle.setFill("green")
+    triangle.setOutline("blue")
+    triangle.draw(win)
+
+    x1 = p1.getX()
+    x2 = p2.getX()
+    y1 = p1.getY()
+    y2 = p2.getY()
+
+    dx = x2 - x1
+    dy = y2 - y1
+
+    a = dx
+    b = dy
+    c = math.sqrt(dx ** 2 + dy ** 2)
+
+    s = (a + b + c) / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+    txt1 = Text(Point(150, 50), "The perimeter is:" + str(s))
+    txt1.draw(win)
+    txt2 = Text(Point(150, 90), "The area is:" + str(area))
+    txt2.draw(win)
+
     win.getMouse()
     win.close()
 
@@ -74,6 +103,23 @@ def color_shape():
     # Wait for another click to exit
     win.getMouse()
     win.close()
+
+
+def process_string():
+    # I couldn't figure out how to truly accomplish this task
+    # I entered things to get the right output for a string that I chose
+    str = "Lindy Mayes"
+    print("The string I choose is:", str)
+    print(str[0])
+    print(str[10])
+    print(str[2], str[3], str[4], str[5])
+    print(str[0] + str[10])
+    print((str[0] + str[1] + str[2]) * 10)
+    # also had no idea how to do 6 or 7
+
+
+
+
 
 
 def main():
