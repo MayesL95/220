@@ -41,7 +41,19 @@ def pi():
         frac = num / den
         acc = acc * frac
     print(acc)
+"""
+print(whatever it is you want to print, end="")-----> this will print in a horizontal line rather than vertical
 
+in sequence, explanation                
+    x-->     0 1 2 3 4 5 6 7 8 9            for x in range(1, terms +1):
+    pattern +1+0+1+0+1+0+1+0+1+0                the first 1 means we are starting with the value +1
+    x//3     0 2 0 2 0 2 0 2 0 2             print (x + (x + 1) // 2) or (1 + (x // 2) * 2)   
+    output   1 1 3 3 5 5 7 7 9 9     
+
+
+
+
+"""
 
 
 

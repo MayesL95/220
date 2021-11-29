@@ -43,4 +43,10 @@ def power():
         acc = acc * base
     print(acc)
 
-
+def main():
+    sum_of_threes()
+    multiplication_table()
+    triangle_area()
+    sumSquares()
+    power()
+main()

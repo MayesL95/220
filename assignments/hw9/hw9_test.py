@@ -4,7 +4,7 @@ import sys
 import pytest
 from graphics import GraphWin, Point, Rectangle, Text
 
-from hw9.button import Button
+from hw9.Button import Button
 from tests.test_framework import Test_Framework as Tester
 
 tester = Tester(sub_points=1)
@@ -74,7 +74,7 @@ class TestClass:
     def test_linter_button(self):
         global tester
         tester.area_start("code style | button")
-        tester.lint('button.py', 12)
+        tester.lint('Button.py', 12)
         tester.area_end("code style | button")
 
     def test_linter_game(self):
